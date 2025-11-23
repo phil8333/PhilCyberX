@@ -1,0 +1,112 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Contact • PhilCyber</title>
+
+    <link rel="stylesheet" href="styles.css" />
+
+    <style>
+        body {
+            font-family: Arial, sans-serif;
+            background: #0d1117;
+            color: #e6edf3;
+            margin: 0;
+            padding: 0;
+        }
+
+        header {
+            background: #161b22;
+            padding: 20px;
+            display: flex;
+            justify-content: space-between;
+            align-items: center;
+        }
+
+        header a {
+            color: #58a6ff;
+            margin-right: 20px;
+            text-decoration: none;
+            font-size: 18px;
+        }
+
+        h1 {
+            text-align: center;
+            margin-top: 40px;
+            color: #58a6ff;
+        }
+
+        .contact-box {
+            width: 60%;
+            margin: 50px auto;
+            background: #161b22;
+            padding: 30px;
+            border-radius: 12px;
+            box-shadow: 0 0 10px rgba(0,0,0,0.6);
+        }
+
+        label {
+            display: block;
+            margin-top: 20px;
+            font-size: 16px;
+        }
+
+        input, textarea {
+            width: 100%;
+            padding: 10px;
+            background: #0d1117;
+            border: 1px solid #30363d;
+            color: #e6edf3;
+            font-size: 16px;
+            border-radius: 6px;
+            margin-top: 5px;
+        }
+
+        button {
+            margin-top: 20px;
+            background: #238636;
+            border: none;
+            padding: 12px 20px;
+            color: white;
+            font-size: 16px;
+            border-radius: 6px;
+            cursor: pointer;
+        }
+
+        button:hover {
+            background: #2ea043;
+        }
+    </style>
+</head>
+
+<body>
+
+<header>
+    <div class="logo"><a href="index.html">PhilCyber</a></div>
+    <nav>
+        <a href="index.html">Home</a>
+        <a href="about.html">About</a>
+        <a href="contact.html">Contact</a>
+    </nav>
+</header>
+
+<h1>Contact PhilCyber</h1>
+
+<div class="contact-box">
+    <form>
+        <label>Your Name</label>
+        <input type="text" placeholder="Enter your name" required>
+
+        <label>Email Address</label>
+        <input type="email" placeholder="you@example.com" required>
+
+        <label>Your Message</label>
+        <textarea rows="5" placeholder="Type your message..." required></textarea>
+
+        <button type="submit">Send Message</button>
+    </form>
+</div>
+
+</body>
+</html>
