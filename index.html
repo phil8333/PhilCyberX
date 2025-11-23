@@ -1,41 +1,54 @@
-<!doctype html>
-<section id="posts" class="posts-section">
-<h2>Latest Posts</h2>
-<div id="postsGrid" class="posts-grid"></div>
-</section>
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>PhilCyberX</title>
 
+    <!-- Link to CSS -->
+    <link rel="stylesheet" href="assets/css/style.css">
+</head>
+
+<body>
+
+<header>
+    <h1>PhilCyberX</h1>
+    <p>Your cybersecurity news, tools, and insights</p>
+</header>
+
+<section id="posts" class="posts-section">
+    <h2>Latest Posts</h2>
+    <div id="postsGrid" class="posts-grid"></div>
+</section>
 
 <aside class="sidebar">
-<div class="panel">
-<h3>Subscribe</h3>
-<form id="subscribeForm" onsubmit="event.preventDefault(); alert('Subscribed (demo)')">
-<input type="email" placeholder="you@example.com" required>
-<button class="btn primary" type="submit">Subscribe</button>
-</form>
-</div>
 
+    <div class="panel">
+        <h3>Subscribe</h3>
+        <form id="subscribeForm" onsubmit="event.preventDefault(); alert('Subscribed (demo)')">
+            <input type="email" placeholder="you@example.com" required>
+            <button class="btn primary" type="submit">Subscribe</button>
+        </form>
+    </div>
 
-<div class="panel">
-<h3>Tags</h3>
-<div id="tagCloud" class="tag-cloud"></div>
-</div>
+    <div class="panel">
+        <h3>Tags</h3>
+        <div id="tagCloud" class="tag-cloud"></div>
+    </div>
+
 </aside>
 
-
 <section id="contact" class="panel">
-<h3>Contact</h3>
-<p>Email: <a href="mailto:hello@philcyber.example">hello@philcyber.example</a></p>
+    <h3>Contact</h3>
+    <p>Email: admin@philcyberx.com</p>
 </section>
-</main>
 
-
-<footer class="site-footer">
-<div class="container">
-<p>© <span id="year"></span> PhilCyber — Built responsibly. Links point to official sites or open-source repos.</p>
-</div>
+<footer>
+    <p>© 2025 PhilCyberX. All rights reserved.</p>
 </footer>
 
-
+<!-- Link to JavaScript -->
 <script src="assets/js/main.js"></script>
+
 </body>
 </html>
