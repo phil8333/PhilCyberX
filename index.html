@@ -10,41 +10,55 @@
 
 <body>
 
-<header>
-    <h1>PhilCyberX</h1>
-    <p>Your cybersecurity news, tools, and insights with Mary</p>
+<!-- HEADER -->
+<header class="site-header">
+    <div class="container main-nav">
+        <div class="logo">PhilCyberX</div>
+
+        <nav>
+            <a href="index.html">Home</a>
+            <a href="news.html">News</a>
+            <a href="tools.html">Tools</a>
+            <a href="about.html">About</a>
+            <a href="contact.html">Contact</a>
+        </nav>
+    </div>
 </header>
 
-<section id="posts" class="posts-section">
-    <h2>Latest Posts</h2>
-    <div id="postsGrid" class="posts-grid"></div>
-</section>
+<!-- MAIN CONTENT -->
+<div class="container">
 
-<aside class="sidebar">
+    <section id="posts" class="panel">
+        <h2>Latest Posts</h2>
+        <div id="postsGrid" class="posts-grid"></div>
+    </section>
 
-    <div class="panel">
+    <aside class="panel">
         <h3>Subscribe</h3>
         <form id="subscribeForm" onsubmit="event.preventDefault(); alert('Subscribed (demo)')">
             <input type="email" placeholder="you@example.com" required>
-            <button class="btn primary" type="submit">Subscribe</button>
+            <button class="btn" type="submit">Subscribe</button>
         </form>
-    </div>
+    </aside>
 
-    <div class="panel">
+    <aside class="panel">
         <h3>Tags</h3>
         <div id="tagCloud" class="tag-cloud"></div>
+    </aside>
+
+    <section id="contact" class="panel">
+        <h3>Contact</h3>
+        <p>Email: bernardeshun833@gmail.com</p>
+        <p>Number: +44 74 2574 7522</p>
+    </section>
+
+</div>
+
+<!-- FOOTER -->
+<footer class="site-footer">
+    <div class="container">
+        © 2025 PhilCyberX. All rights reserved.
     </div>
-
-</aside>
-
-<section id="contact" class="panel">
-    <h3>Contact</h3>
-    <p>Email: bernardeshun833@gmail.com</p>
-    <p>Number: +44 74 2574 7522</p>
-</section>
-
-<footer>
-    <p>© 2025 PhilCyberX. All rights reserved.</p>
 </footer>
 
 <script src="assets/js/main.js"></script>
