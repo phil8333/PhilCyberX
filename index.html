@@ -10,12 +10,16 @@
 
 <body>
 
-
+<!-- ===== MODERN ANIMATED HEADER ===== -->
 <header class="site-header">
-    <div class="container main-nav">
-        <div class="logo">PhilCyberX</div>
+    <div class="header-inner">
 
-        <nav>
+        <div class="brand">
+            <span class="logo">PhilCyberX</span>
+            <span class="subtitle">Cybersecurity • Tools • News</span>
+        </div>
+
+        <nav class="nav-links">
             <a href="index.html">Home</a>
             <a href="news.html">News</a>
             <a href="tools.html">Tools</a>
@@ -28,17 +32,32 @@
             <a href="privacy.html">Privacy</a>
             <a href="terms.html">Terms</a>
         </nav>
+
+        <div class="actions">
+            <button class="theme-toggle">☀️/🌙</button>
+            <button class="menu-toggle">☰</button>
+        </div>
+
     </div>
 </header>
 
-<div class="container">
+<!-- ===== HERO SECTION ===== -->
+<section class="hero reveal">
+    <h1>Welcome to PhilCyberX</h1>
+    <p>Your trusted source for cybersecurity tools, news, and insights.</p>
+    <a href="news.html" class="btn primary">Explore Latest Posts</a>
+</section>
 
-    <section id="posts" class="panel">
+<div class="container main-content">
+
+    <!-- ===== LATEST POSTS ===== -->
+    <section id="posts" class="panel reveal">
         <h2>Latest Posts</h2>
         <div id="postsGrid" class="posts-grid"></div>
     </section>
 
-    <aside class="panel">
+    <!-- ===== SUBSCRIBE ===== -->
+    <aside class="panel reveal">
         <h3>Subscribe</h3>
         <form id="subscribeForm" onsubmit="event.preventDefault(); alert('Subscribed (demo)')">
             <input type="email" placeholder="you@example.com" required>
@@ -46,12 +65,14 @@
         </form>
     </aside>
 
-    <aside class="panel">
+    <!-- ===== TAG CLOUD ===== -->
+    <aside class="panel reveal">
         <h3>Tags</h3>
         <div id="tagCloud" class="tag-cloud"></div>
     </aside>
 
-    <section id="contact" class="panel">
+    <!-- ===== CONTACT ===== -->
+    <section id="contact" class="panel reveal">
         <h3>Contact</h3>
         <p>Email: bernardeshun833@gmail.com</p>
         <p>Number: +44 74 2574 7522</p>
@@ -59,6 +80,7 @@
 
 </div>
 
+<!-- ===== FOOTER ===== -->
 <footer class="site-footer">
     <div class="container">
         © 2025 PhilCyberX. All rights reserved.
