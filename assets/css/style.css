@@ -1,100 +1,203 @@
-/* ------------------------------
-   PhilCyberX – Global Styles
---------------------------------*/
+/* ==========================================
+   PHILCYBERX — FUTURISTIC HACKING THEME v1
+   Neon Green • Dark Matrix • Animated UI
+========================================== */
 
 * {
-  margin: 0;
-  padding: 0;
-  box-sizing: border-box;
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
 }
 
 body {
-  font-family: Arial, Helvetica, sans-serif;
-  background-color: #0f0f0f;
-  color: #e5e5e5;
-  line-height: 1.6;
+    background: #050505;
+    color: #d4ffd4;
+    font-family: "Courier New", monospace;
+    line-height: 1.6;
+    overflow-x: hidden;
 }
 
-a {
-  color: #4da6ff;
-  text-decoration: none;
+/* ===============================
+      ANIMATED GRID BACKGROUND
+=============================== */
+
+body::before {
+    content: "";
+    position: fixed;
+    top: 0; left: 0;
+    width: 100%; height: 100%;
+    background-image: linear-gradient(
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 1px
+    ), 
+    linear-gradient(
+        90deg,
+        rgba(0, 255, 0, 0.05) 1px,
+        transparent 1px
+    );
+    background-size: 40px 40px;
+    animation: gridMove 20s linear infinite;
+    pointer-events: none;
+    z-index: 0;
 }
+
+@keyframes gridMove {
+    0% { transform: translate(0,0); }
+    100% { transform: translate(40px,40px); }
+}
+
+/* ===================================
+            ANIMATED HEADER
+=================================== */
 
 header.site-header {
-  background: #1a1a1a;
-  padding: 20px 0;
-  border-bottom: 1px solid #333;
+    background: rgba(0, 0, 0, 0.7);
+    backdrop-filter: blur(6px);
+    border-bottom: 2px solid #00ff55;
+    padding: 20px 0;
+    position: sticky;
+    top: 0;
+    z-index: 999;
+    box-shadow: 0 0 20px #00ff5588;
 }
 
 .container {
-  width: 90%;
-  max-width: 1100px;
-  margin: auto;
+    width: 90%;
+    max-width: 1200px;
+    margin: auto;
 }
 
 .main-nav {
-  display: flex;
-  justify-content: space-between;
-  align-items: center;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
 }
 
 .logo {
-  font-size: 26px;
-  font-weight: bold;
-  color: #4da6ff;
+    font-size: 28px;
+    font-weight: bold;
+    color: #00ff55;
+    text-shadow: 0 0 10px #00ff55;
+    animation: glitch 1.5s infinite;
 }
 
-.main-nav a {
-  margin-left: 20px;
-  font-size: 16px;
+/* Glitch animation */
+@keyframes glitch {
+    0% { text-shadow: 0 0 8px #00ff55; }
+    50% { text-shadow: 0 0 12px #00ff55; }
+    100% { text-shadow: 0 0 8px #00ff55; }
 }
 
-.panel {
-  background: #1a1a1a;
-  padding: 25px;
-  margin: 25px 0;
-  border-radius: 8px;
-  border: 1px solid #333;
+.main-nav nav a {
+    margin-left: 18px;
+    color: #88ff88;
+    text-decoration: none;
+    font-size: 17px;
+    position: relative;
+    transition: 0.3s ease;
 }
+
+/* Cyber underline animation */
+.main-nav nav a::after {
+    content: "";
+    position: absolute;
+    left: 0; bottom: -4px;
+    width: 0%;
+    height: 2px;
+    background: #00ff55;
+    transition: width 0.3s ease;
+}
+
+.main-nav nav a:hover {
+    color: #00ff55;
+}
+
+.main-nav nav a:hover::after {
+    width: 100%;
+}
+
+/* ============================
+         PANELS + CARDS
+============================ */
+
+.panel, .tool-card {
+    background: rgba(0, 20, 0, 0.7);
+    border: 1px solid #00ff5588;
+    border-radius: 10px;
+    padding: 25px;
+    margin: 30px 0;
+    box-shadow: 0 0 15px #00ff3355;
+    position: relative;
+    z-index: 1;
+    transition: 0.3s;
+}
+
+.panel:hover, .tool-card:hover {
+    box-shadow: 0 0 25px #00ff55;
+    transform: translateY(-5px);
+}
+
+/* ============================
+             TEXT
+============================ */
 
 h1, h2, h3 {
-  margin-bottom: 15px;
+    color: #00ff55;
+    margin-bottom: 15px;
+    text-shadow: 0 0 6px #00ff55;
 }
+
+a {
+    color: #00ff99;
+}
+
+/* ============================
+             BUTTONS
+============================ */
+
+button, .btn, .btn-download {
+    background: #00cc44;
+    color: #000;
+    border: none;
+    padding: 10px 18px;
+    border-radius: 6px;
+    font-size: 16px;
+    cursor: pointer;
+    font-weight: bold;
+    transition: 0.3s;
+    box-shadow: 0 0 10px #00ff55;
+}
+
+button:hover, .btn:hover, .btn-download:hover {
+    background: #00ff55;
+    box-shadow: 0 0 18px #00ff55;
+}
+
+/* ============================
+            FOOTER
+============================ */
 
 footer.site-footer {
-  background: #111;
-  padding: 30px 0;
-  margin-top: 40px;
-  text-align: center;
-  border-top: 1px solid #333;
-}
-
-footer .container {
-  color: #888;
-}
-
-button, .btn {
-  background: #4da6ff;
-  border: none;
-  padding: 10px 18px;
-  font-size: 16px;
-  color: #fff;
-  border-radius: 6px;
-  cursor: pointer;
-}
-
-button:hover, .btn:hover {
-  background: #1e90ff;
-}
-
-/* Mobile */
-@media (max-width: 768px) {
-  .main-nav {
-    flex-direction: column;
+    background: #000;
+    padding: 30px 0;
     text-align: center;
-  }
+    border-top: 1px solid #00ff55;
+    color: #66ff99;
+    margin-top: 40px;
+}
 
-  .main-nav a {
-    margin: 10px;
-  }
+/* ============================
+            MOBILE
+============================ */
+
+@media (max-width: 768px) {
+    .main-nav {
+        flex-direction: column;
+        text-align: center;
+    }
+
+    .main-nav nav a {
+        margin: 12px 0;
+        display: inline-block;
+    }
 }
